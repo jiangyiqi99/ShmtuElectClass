@@ -7,9 +7,9 @@ def login():
     # 配置 Selenium WebDriver
     chrome_options = Options()
     chrome_options.add_argument("--start-maximized")
+    chrome_options.binary_location = "./chrome/chrome.exe"
 
-    # 替换为你的 ChromeDriver 路径
-    service = Service('./chromedriver')
+    service = Service('./chrome/chromedriver.exe')
     browser = webdriver.Chrome(service=service, options=chrome_options)
 
     # 打开指定网址
